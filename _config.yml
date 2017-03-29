@@ -12,6 +12,8 @@ github_username:  hellojusi
 markdown: kramdown
 gems:
   - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+exclude: ["_dev",
+          "gulpfile.js",
+          "node_modules",
+          "package.json",
+          "CNAME"]
