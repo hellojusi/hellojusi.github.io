@@ -2,6 +2,8 @@
  * Require all the things!
  */
 var gulp = require('gulp'),
+	plumber = require('gulp-plumber'),
+	gutil = require('gulp-util'),
 	sass = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	minifyCSS = require('gulp-clean-css'),
@@ -29,6 +31,10 @@ var base = './',
  */
 gulp.task('compile-sass', function() {
 	return gulp.src(paths.scss)
+		.pipe(plumber((error) => {
+	        gutil.log(gutil.colors.red(error.message));
+	        gulp.task('compile-sass').emit('end');
+	    }))
 		.pipe(sass())
 		.pipe(autoprefixer('last 3 versions', 'ie 9'))
 		.pipe(minifyCSS())
