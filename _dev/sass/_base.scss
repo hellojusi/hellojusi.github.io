@@ -1,0 +1,45 @@
+// Headings
+
+h1,
+h2, 
+h3 {
+	font-family: $heading-font;
+	font-weight: 600;
+	margin: 1rem 0;
+}
+
+h1 {
+	font-size: 200%;
+}
+
+h2 {
+	font-size: 130%;
+}
+
+h3 {
+	font-size: 120%;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid color('solitude');
+}
+
+h4 {
+	font-size: 100%;
+	font-family: $body-font;
+	font-weight: 600;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+
+// Links
+a {
+	color: color('sky');
+    text-decoration: none;
+    transition: all 0.2s linear;
+    
+    &:hover {
+		color: color('ocean');
+    }
+}

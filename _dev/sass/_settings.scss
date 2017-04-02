@@ -1,0 +1,36 @@
+// Responsive typography
+$min-width: 320;
+$max-width: 960;
+$min-font: 14;
+$max-font: 17;
+
+:root {
+	font-size: #{$min-font}px;
+}
+
+@media (min-width: #{$min-width}px) and (max-width: #{$max-width}px) {
+	:root {
+		font-size: calc( #{$min-font}px + (#{$max-font} - #{$min-font}) * ( (100vw - #{$min-width}px) / ( #{$max-width} - #{$min-width})));
+	}
+}
+
+@media (min-width: #{$max-width}px) {
+	:root {
+		font-size: #{$max-font}px;
+	}
+}
+
+
+// Font stacks
+$body-font: ('Noto Sans', sans-serif);
+$heading-font: ('Work Sans', sans-serif);
+
+
+// Colors
+$colors: (
+	'oxford-blue': rgba(40, 48, 55, 1),
+	'blue-bayoux': rgba(94, 112, 129, 1),
+	'solitude': rgba(231, 235, 238, 1),
+	'sky': rgba(3, 169, 244, 1.00),
+	'ocean': rgba(2, 119, 189, 1.00)
+);

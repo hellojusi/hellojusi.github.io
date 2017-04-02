@@ -1,0 +1,27 @@
+.gallery-block {
+	@include cf;
+	&__title {
+		width: 26%;
+		float: left;
+		@media (max-width: 48em) {
+			float: none;
+			width: 100%;
+			margin-bottom: 2em;
+		}
+	}
+	&__content {
+		width: 70%;
+		float: right;
+		@media (max-width: 48em) {
+			float: none;
+			width: 100%;
+		}
+	}
+	&__portfolio-item {
+		margin-bottom: 1em;
+		vertical-align: top;
+		&:nth-child(2n+2) {
+			margin-right: 0;
+		}
+	}
+}

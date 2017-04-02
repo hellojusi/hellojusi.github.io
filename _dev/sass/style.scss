@@ -1,5 +1,47 @@
+// -----------------------------------------------------
+// hellojusi.com 
+// by Justyna Ratajczak <justyna.ratajczak@gmail.com>
+// MIT License
+// -----------------------------------------------------
+// CSS Architecture based on ITCSS by Harry Roberts
+// http://csswizardry.net/talks/2014/11/itcss-dafed.pdf
+// -----------------------------------------------------
+
+
+// -----------------------------------------------------
+//  Settings: Global variables, config switches.
+// -----------------------------------------------------
 @import "settings";
+
+// -----------------------------------------------------
+//  Tools: Default mixins and functions.
+// -----------------------------------------------------
 @import "tools";
+
+// -----------------------------------------------------
+//  Generic: Ground-zero styles (resets, box-sizing). 
+// -----------------------------------------------------
 @import "generic";
+
+// -----------------------------------------------------
+//  Base: Unclassed HTML elements (type selectors). 
+// -----------------------------------------------------
 @import "base";
+
+// -----------------------------------------------------
+//  Objects: Cosmetic-free design patterns.
+// -----------------------------------------------------
 @import "objects";
+
+// -----------------------------------------------------
+//  Components: Designed components, chunks of UI. 
+// -----------------------------------------------------
+@import "component.header";
+@import "component.promo";
+@import "component.site-section";
+@import "component.gallery-block";
+
+// -----------------------------------------------------
+//  Trumps: Helpers and overrides.
+// -----------------------------------------------------
+@import "trumps";

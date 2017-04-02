@@ -1,0 +1,31 @@
+.site-header {
+	@include cf;
+	max-width: 40rem;
+	margin: 3rem auto 0;
+	@media (max-width: 40em) {
+		text-align: center;
+		border: 0;
+		margin: 0 auto;
+		padding: 3rem 2rem;
+	}
+	&__title {
+		margin: 0.4rem 0 0;
+		line-height: 1.2;
+	}
+	&__description {
+		margin: 0;
+		font-size: 120%;
+		font-weight: 400;
+		color: color('blue-bayoux');
+	}
+	&__avatar {
+		float: left;
+		width: 5rem;
+		margin-right: 2rem;
+		border-radius: 50%;
+		@media (max-width: 40em) {
+			float: none;
+			@include center;
+		}
+	}
+}
